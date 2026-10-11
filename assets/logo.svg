@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f8a68"/>
+      <stop offset="100%" stop-color="#0a3d33"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f6c15b"/>
+      <stop offset="100%" stop-color="#f2a71b"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="200" height="200" rx="44" fill="url(#bgGrad)"/>
+
+  <!-- Palm-leaf monogram: three fronds forming an "M", rooted in a single trunk -->
+  <g transform="translate(100,118)">
+    <path d="M 0 18
+             C 0 -6, -10 -40, -46 -56
+             C -34 -28, -28 -4, -24 18 Z"
+          fill="url(#goldGrad)"/>
+    <path d="M 0 18
+             C 0 -14, -4 -48, 0 -70
+             C 4 -48, 0 -14, 0 18 Z"
+          fill="url(#goldGrad)"/>
+    <path d="M 0 18
+             C 0 -6, 10 -40, 46 -56
+             C 34 -28, 28 -4, 24 18 Z"
+          fill="url(#goldGrad)"/>
+    <!-- trunk -->
+    <rect x="-7" y="18" width="14" height="30" rx="7" fill="url(#goldGrad)"/>
+  </g>
+
+  <!-- Code-bracket underline, nods to software craft -->
+  <g transform="translate(100,160)" fill="none" stroke="#faf7f0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M -38 -6 L -50 4 L -38 14"/>
+    <path d="M 38 -6 L 50 4 L 38 14"/>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f8a68"/>
+      <stop offset="100%" stop-color="#0a3d33"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f6c15b"/>
+      <stop offset="100%" stop-color="#f2a71b"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="200" height="200" rx="44" fill="url(#bgGrad)"/>
+
+  <!-- Simplified bold palm-leaf monogram for small-size legibility -->
+  <g transform="translate(100,128)">
+    <path d="M 0 30
+             C 0 -4, -16 -52, -58 -72
+             C -44 -36, -34 -4, -28 30 Z"
+          fill="url(#goldGrad)"/>
+    <path d="M 0 30
+             C -2 -20, -4 -58, 0 -86
+             C 4 -58, 2 -20, 0 30 Z"
+          fill="url(#goldGrad)"/>
+    <path d="M 0 30
+             C 0 -4, 16 -52, 58 -72
+             C 44 -36, 34 -4, 28 30 Z"
+          fill="url(#goldGrad)"/>
+    <rect x="-11" y="28" width="22" height="38" rx="11" fill="url(#goldGrad)"/>
+  </g>
+</svg>
