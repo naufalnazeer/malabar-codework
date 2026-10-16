@@ -20,7 +20,8 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+img, svg { max-width: 100%; }
 
 body {
   margin: 0;
@@ -344,6 +345,51 @@ ul { padding: 0; margin: 0; list-style: none; }
   border-radius: 999px;
   font-size: 0.9rem;
 }
+.service-price small {
+  font-weight: 500;
+  font-size: 0.78rem;
+  color: var(--ink-600);
+}
+
+/* ===== Free Guidance ===== */
+.guidance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.guidance-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px 26px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.guidance-icon { font-size: 2rem; display: block; margin-bottom: 10px; }
+.guidance-card h3 { font-size: 1.05rem; }
+.guidance-card p { font-size: 0.9rem; }
+
+.guidance-tag {
+  display: inline-block;
+  margin-top: 6px;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--teal-900);
+  background: var(--gold-400);
+  padding: 4px 14px;
+  border-radius: 999px;
+}
+
+.guidance-note {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--teal-900);
+  font-weight: 500;
+}
 
 /* ===== Why Us ===== */
 .why-wrap {
@@ -636,19 +682,16 @@ ul { padding: 0; margin: 0; list-style: none; }
 /* ===== Responsive ===== */
 @media (max-width: 960px) {
   .hero-wrap, .why-wrap, .contact-wrap { grid-template-columns: 1fr; }
-  .service-grid, .pricing-grid, .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-grid, .pricing-grid, .process-grid, .guidance-grid { grid-template-columns: repeat(2, 1fr); }
   .trust-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-art { min-height: 280px; order: -1; }
   .price-card.featured { transform: none; }
-}
 
-@media (max-width: 720px) {
+  /* Collapse to hamburger nav earlier than 720px — the full nav + WhatsApp
+     button no longer fit in one row once tablet widths lose the extra space. */
   .main-nav { display: none; }
   .nav-toggle { display: flex; }
   .nav-actions .btn-whatsapp span { display: none; }
-  .service-grid, .pricing-grid, .process-grid, .trust-grid { grid-template-columns: 1fr; }
-  .footer-wrap { grid-template-columns: 1fr; }
-  .section { padding: 64px 0; }
 
   .main-nav.open {
     display: flex;
@@ -661,5 +704,18 @@ ul { padding: 0; margin: 0; list-style: none; }
     padding: 20px 24px;
     gap: 16px;
     box-shadow: var(--shadow-md);
+    z-index: 50;
   }
+}
+
+@media (max-width: 720px) {
+  .service-grid, .pricing-grid, .process-grid, .trust-grid, .guidance-grid { grid-template-columns: 1fr; }
+  .footer-wrap { grid-template-columns: 1fr; }
+  .section { padding: 64px 0; }
+}
+
+@media (max-width: 400px) {
+  .nav-wrap { gap: 10px; padding: 12px 16px; }
+  .logo-text { font-size: 0.92rem; }
+  .btn-whatsapp { padding: 10px 12px; }
 }
