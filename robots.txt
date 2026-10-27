@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://malabar-codework.com/sitemap.xml
+Sitemap: https://www.malabar-codeworks.com/sitemap.xml
